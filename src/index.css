@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tambahan perspective untuk efek 3D di Hero Section */
+.perspective-1000 {
+  perspective: 1000px;
+}
