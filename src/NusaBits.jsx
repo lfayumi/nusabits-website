@@ -854,7 +854,7 @@ export default function App() {
 
                 {/* --- FLOATING WHATSAPP BUTTON --- */}
                 <a
-                    href="https://wa.me/6281123456789"
+                    href="https://wa.me/6282235442179"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 hover:scale-110 hover:bg-green-600 transition-all cursor-pointer group"
