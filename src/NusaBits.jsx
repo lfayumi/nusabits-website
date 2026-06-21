@@ -810,7 +810,7 @@ export default function App() {
                                 <h4 className="text-white font-bold mb-6">Menu Links</h4>
                                 <ul className="space-y-3 text-sm">
                                     {['Home', 'About Us', 'Portfolio', 'Process', 'Blog / Insights'].map(link => (
-                                        <li key={link}><a href="#" className="hover:text-blue-400 transition-colors">{link}</a></li>
+                                        <li key={link}><a href="blog.nusabits.com" target="new" className="hover:text-blue-400 transition-colors">{link}</a></li>
                                     ))}
                                 </ul>
                             </div>
