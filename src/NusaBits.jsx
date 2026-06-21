@@ -177,7 +177,7 @@ export default function App() {
         { name: 'Portfolio', id: 'portfolio' },
         { name: 'Process', id: 'process' },
         { name: 'Testimonials', id: 'testimonials' },
-        { name: 'Blog', id: 'blog' },
+        { name: 'Blog', url: 'https://blog.nusabits.com' }, // 👈 tambahkan ini
         { name: 'Contact', id: 'contact' },
     ];
 
@@ -242,13 +242,25 @@ export default function App() {
                         {/* Desktop Nav */}
                         <nav className="hidden lg:flex items-center gap-8 font-medium text-sm">
                             {navLinks.map((link) => (
-                                <button
-                                    key={link.id}
-                                    onClick={() => scrollTo(link.id)}
-                                    className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                                >
-                                    {link.name}
-                                </button>
+                                link.url ? (
+                                    <a
+                                        key={link.name}
+                                        href={link.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                                    >
+                                        {link.name}
+                                    </a>
+                                ) : (
+                                    <button
+                                        key={link.id}
+                                        onClick={() => scrollTo(link.id)}
+                                        className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                                    >
+                                        {link.name}
+                                    </button>
+                                )
                             ))}
 
                             {/* Dark Mode Toggle */}
@@ -283,13 +295,25 @@ export default function App() {
                     {mobileMenuOpen && (
                         <div className="lg:hidden absolute top-full left-0 w-full bg-white dark:bg-slate-900 shadow-xl border-t border-slate-100 dark:border-slate-800 py-4 flex flex-col items-center gap-4">
                             {navLinks.map((link) => (
-                                <button
-                                    key={link.id}
-                                    onClick={() => scrollTo(link.id)}
-                                    className="w-full text-center py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium"
-                                >
-                                    {link.name}
-                                </button>
+                                link.url ? (
+                                    <a
+                                        key={link.name}
+                                        href={link.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-full text-center py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium"
+                                    >
+                                        {link.name}
+                                    </a>
+                                ) : (
+                                    <button
+                                        key={link.id}
+                                        onClick={() => scrollTo(link.id)}
+                                        className="w-full text-center py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium"
+                                    >
+                                        {link.name}
+                                    </button>
+                                )
                             ))}
                             <button onClick={() => scrollTo('contact')} className="w-11/12 mx-auto py-3 mt-2 rounded-lg bg-blue-600 text-white font-medium shadow-md">
                                 Let's Talk
