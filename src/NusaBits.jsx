@@ -806,14 +806,32 @@ export default function App() {
                                 </div>
                             </div>
 
-                            <div>
-                                <h4 className="text-white font-bold mb-6">Menu Links</h4>
-                                <ul className="space-y-3 text-sm">
-                                    {['Home', 'About Us', 'Portfolio', 'Process', 'Blog / Insights'].map(link => (
-                                        <li key={link}><a href="#" className="hover:text-blue-400 transition-colors">{link}</a></li>
-                                    ))}
-                                </ul>
-                            </div>
+<div>
+    <h4 className="text-white font-bold mb-6">Menu Links</h4>
+    <ul className="space-y-3 text-sm">
+        {['Home', 'About Us', 'Portfolio', 'Process', 'Blog / Insights'].map((link) => (
+            <li key={link}>
+                {link === 'Blog / Insights' ? (
+                    <a
+                        href="https://blog.nusabits.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-blue-400 transition-colors"
+                    >
+                        {link}
+                    </a>
+                ) : (
+                    <a
+                        href="#"
+                        className="hover:text-blue-400 transition-colors"
+                    >
+                        {link}
+                    </a>
+                )}
+            </li>
+        ))}
+    </ul>
+</div>
 
                             <div>
                                 <h4 className="text-white font-bold mb-6">Services</h4>
